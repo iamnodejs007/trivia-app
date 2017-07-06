@@ -1,14 +1,33 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Trivia App
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <button ion-button block (click)='otherPage()'>About Me</button>
+
+  <h2>Preferences</h2>
+  <ion-list>
+    <ion-item>
+      <ion-label>Category</ion-label>
+      <ion-select [(ngModel)]="categoryResult">
+        <ion-option value="Computers">Computers</ion-option>
+        <ion-option value="Gadgets">Gadgets</ion-option>
+        <ion-option value="Mathematics">Mathematics</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Difficulty</ion-label>
+      <ion-select [(ngModel)]="difficultyResult">
+        <ion-option value="Easy">Easy</ion-option>
+        <ion-option value="Medium">Medium</ion-option>
+        <ion-option value="Hard">Hard</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
+
 </ion-content>
