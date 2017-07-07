@@ -1,15 +1,5 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Trivia App
-    </ion-title>
-  </ion-navbar>
-</ion-header>
-
 <ion-content padding>
-  <button ion-button block (click)='otherPage()'>About Me</button>
-
-  <h2>Preferences</h2>
+  <h2>Quiz Setup</h2>
   <ion-list>
     <ion-item>
       <ion-label>Category</ion-label>
@@ -22,12 +12,21 @@
     <ion-item>
       <ion-label>Difficulty</ion-label>
       <ion-select [(ngModel)]="difficultyResult">
-        <ion-option value="Easy">Easy</ion-option>
-        <ion-option value="Medium">Medium</ion-option>
-        <ion-option value="Hard">Hard</ion-option>
+        <ion-option value="easy">Easy</ion-option>
+        <ion-option value="medium">Medium</ion-option>
+        <ion-option value="hard">Hard</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Number of Questions</ion-label>
+      <ion-select [(ngModel)]="numberResult">
+        <ion-option value=5>5</ion-option>
+        <ion-option value=10>10</ion-option>
+        <ion-option value=15>15</ion-option>
+        <ion-option value=20>20</ion-option>
       </ion-select>
     </ion-item>
   </ion-list>
-
-
+  <button ion-button block (click)='startQuiz()'>Start Quiz</button>
+  <button ion-button full clear (click)='otherPage()'>Click here to learn more about me!</button>
 </ion-content>

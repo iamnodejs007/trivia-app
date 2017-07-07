@@ -1,15 +1,50 @@
-<ion-slides pager>
+<ion-content padding>
+  <ion-slides pager>
 
-  <ion-slide style="background-color: white">
-    <h2>Welcome to HaxTrivia!</h2>
-  </ion-slide>
+    <ion-slide style="background-color: white">
+      <ion-header>
+        <ion-navbar transparent>
+          <ion-buttons end>
+            <button ion-button clear (click)='skipButton()'>Skip</button>
+          </ion-buttons>
+        </ion-navbar>
+      </ion-header>
 
-  <ion-slide style="background-color: white">
-    <h2>Slide 2</h2>
-  </ion-slide>
+      <ion-avatar>
+        <img src='https://cdn3.iconfinder.com/data/icons/brain-games/1042/Brain-Games-red.png'>
+      </ion-avatar>
+      <br>
+      <h1>Techivia</h1>
+      <br>
+      <p>Created by: Nicholas Mueller</p>
+      <p>An Ionic application.<br>
+      Using the OpenTriviaDB API.</p>
+    </ion-slide>
 
-  <ion-slide style="background-color: white">
-    <h2>Slide 3</h2>
-  </ion-slide>
+    <ion-slide style="background-color: white">
+      <ion-header>
+        <ion-navbar transparent>
+          <ion-buttons end>
+            <button ion-button clear (click)='skipButton()'>Skip</button>
+          </ion-buttons>
+        </ion-navbar>
+      </ion-header>
 
-</ion-slides>
+      <ion-avatar >
+        <img src='https://image.freepik.com/free-vector/man-working-on-his-computer_23-2147508997.jpg'>
+      </ion-avatar>
+      <h2>Welcome</h2>
+      <p>Techivia is a trivia application to test the smartest minds.
+      Exploring topics that only those who are technically inclined will enjoy.</p>
+    </ion-slide>
+
+    <ion-slide style="background-color: white">
+      <h2>Let's get started...</h2>
+      <p>Click the button below to begin.</p>
+      <ion-buttons>
+        <button ion-button block (click)='startedButton()'>Quiz Me!</button>
+      </ion-buttons>
+    </ion-slide>
+
+  </ion-slides>
+</ion-content>

@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Quiz</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+    <ion-card-header>Question # {{ questionNumber }}</ion-card-header>
+    <ion-card-content>{{ currentQuestion }}</ion-card-content>
+    <ion-card-content>
+      <ion-list radio-group text-wrap [(ngModel)]="multipleChoiceAnswer">
+        <ion-item *ngFor='let answer of currentAnswerChoices'>
+          <ion-label>{{ answer }}</ion-label>
+          <ion-radio value="{{ answer }}"></ion-radio>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+    <button *ngIf='multipleChoiceAnswer' ion-button block (click)='nextButton()'>Next</button>
+  </ion-card>
+</ion-content>

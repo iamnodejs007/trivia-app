@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Results</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+    <ion-card-content>
+      <p>Thanks for playing! You answered {{ results.correctNumber }} questions correctly, and {{ results.incorrectNumber }} questions wrong.</p>
+    </ion-card-content>
+    <button ion-button block (click)='playAgain()'>Play Again</button>
+  </ion-card>
+</ion-content>
